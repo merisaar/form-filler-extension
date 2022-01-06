@@ -1,0 +1,29 @@
+{
+    "name": "Form filler",
+    "description": "Fills long forms with prefilled information",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "/components/background.js"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "/components/popup.html",
+        "default_icon": {
+            "16": "/resources/resources/images/get_started16.png",
+            "32": "/resources/images/get_started32.png",
+            "48": "/resources/images/get_started48.png",
+            "128": "/resources/images/get_started128.png"
+        }
+    },
+    "icons": {
+        "16": "/resources/images/get_started16.png",
+        "32": "/resources/images/get_started32.png",
+        "48": "/resources/images/get_started48.png",
+        "128": "/resources/images/get_started128.png"
+    }
+}
