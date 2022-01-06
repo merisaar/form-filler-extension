@@ -1,16 +1,25 @@
-changeColor.addEventListener("click", async () => {
+
+let form_filler_info = document.getElementById("formFillerInfo")
+var elements_under_form = form_filler_info.querySelectorAll('*[id]')
+let form_value_dict = {}
+elements_under_form.forEach(element => {
+    form_value_dict[element.id] = ""
+    element.addEventListener("input", () => {
+        console.log(element.value);
+        form_value_dict[element.id] = element.value;
+    })
+});
+var save_button = document.getElementById("save")
+save_button.addEventListener("click", () => {
+    console.log(form_value_dict)
+
+})
+var send_button = document.getElementById("send");
+send_button.addEventListener("click", () => {
     let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
     chrome.scripting.executeScript({
         target: { tabId: tab.id },
         function: setPageBackgroundColor,
     });
-});
-
-// The body of this function will be executed as a content script inside the
-// current page
-function setPageBackgroundColor() {
-    chrome.storage.sync.get("color", ({ color }) => {
-        document.body.style.backgroundColor = color;
-    });
-}
+})
