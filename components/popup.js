@@ -12,14 +12,11 @@ elements_under_form.forEach(element => {
 var save_button = document.getElementById("save")
 save_button.addEventListener("click", () => {
     console.log(form_value_dict)
+    chrome.storage.sync.set({ form_value_dict });
 
 })
 var send_button = document.getElementById("send");
 send_button.addEventListener("click", () => {
-    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-
-    chrome.scripting.executeScript({
-        target: { tabId: tab.id },
-        function: setPageBackgroundColor,
-    });
+    console.log("syncing")
+    chrome.runtime.sendMessage(form_value_dict)
 })
