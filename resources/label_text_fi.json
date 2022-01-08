@@ -1,0 +1,18 @@
+{
+    "labelText": {
+        "address": "osoite",
+        "location": "postinumero",
+        "dbirth": "syntymäaika",
+        "email": "sähköposti",
+        "fname": "etunimi",
+        "lname": "sukunimi",
+        "phnumber": "puhelinnumero",
+        "position_description_1": "työtehtävä",
+        "work_enddate_1": "työsuhteen päättymispäivämäärä",
+        "work_exp_2": "",
+        "work_exp_3": "",
+        "work_place_1": "työnantaja",
+        "work_position_1": "tehtävänimike",
+        "work_startdate_1": "työsuhteen alkupäivämäärä"
+    }
+}
