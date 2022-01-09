@@ -7,11 +7,13 @@ chrome.storage.sync.get(['form_value_dict'], function (result) {
     let form_filler_info = document.getElementById("formFillerInfo")
     var elements_under_form = form_filler_info.querySelectorAll('*[id]')
     elements_under_form.forEach(element => {
-        form_value_dict[element.id] = form_filler_info_saved[element.id] ?? ""
-        element.value = form_filler_info_saved[element.id] ?? ""
-        element.addEventListener("input", () => {
-            form_value_dict[element.id] = element.value;
-        })
+        if (element.tagName.toLowerCase() == "input") {
+            form_value_dict[element.id] = form_filler_info_saved[element.id] ?? ""
+            element.value = form_filler_info_saved[element.id] ?? ""
+            element.addEventListener("input", () => {
+                form_value_dict[element.id] = element.value;
+            })
+        }
     });
 });
 
