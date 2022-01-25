@@ -9,10 +9,13 @@
         "lname": "sukunimi",
         "phnumber": "puhelinnumero",
         "position_description_": "työtehtävä",
-        "work_enddate_": "työsuhteen päättymispäivämäärä",
-        "work_place_": "työnantaja",
-        "work_position_": "tehtävänimike",
-        "work_startdate_": "työsuhteen alkupäivämäärä",
-        "education_": "työsuhteen alkupäivämäärä"
+        "work_enddate_": "työsuhteen päättymispäivämäärä,loppu",
+        "work_place_": "työnantaja,yritys",
+        "work_position_": "tehtävänimike,työtehtävänimike",
+        "work_startdate_": "työsuhteen alkupäivämäärä,alku",
+        "education_place_": "oppilaitos",
+        "education_degree_": "tutkinto",
+        "education_": "koulutusala",
+        "education_enddate_": "loppu (toteutunut tai odotettu)"
     }
 }

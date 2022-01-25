@@ -7,27 +7,29 @@
 
 <body>
     <form id="formFillerInfo">
-        <label for="fname">First name:</label><br>
+        <label>First name:</label><br>
         <input type="text" id="fname" name="fname" value=""><br>
-        <label for="lname">Last name:</label><br>
+        <label>Last name:</label><br>
         <input type="text" id="lname" value=""><br><br>
-        <label for="dbirth">Date of birth:</label><br>
+        <label>Date of birth:</label><br>
         <input type="date" id="dbirth" value=""><br><br>
-        <label for="address">Address:</label><br>
+        <label>Address:</label><br>
         <input type="text" id="address" value=""><br><br>
-        <label for="address">Postal code:</label><br>
+        <label>Postal code:</label><br>
         <input type="text" id="location" value=""><br><br>
-        <label for="address">City:</label><br>
+        <label>City:</label><br>
         <input type="text" id="city" value=""><br><br>
-        <label for="email">Email:</label><br>
+        <label>Email:</label><br>
         <input type="text" id="email" value=""><br><br>
-        <label for="phnumber">Phone number:</label><br>
+        <label>Phone number:</label><br>
         <input type="text" id="phnumber" value=""><br><br>
-        <label for="education">Education:</label><br>
-        <div id="education_information_block">
-            <input type="text" id="education_1" value=""><br><br>
+        <label>Education:</label><br>
+        <div id="education_block_">
         </div>
-        <div id="work_experience_block">
+        <input type="button" id="add_education" value="Add education">
+        <input style="position: absolute;left: 50%;" type="button" id="remove_education" value="Remove education">
+
+        <div id="work_experience_block_">
         </div>
         <input type="button" id="add_workplace" value="Add workplace">
         <input style="position: absolute;left: 50%;" type="button" id="remove_workplace" value="Remove workplace">
